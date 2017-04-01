@@ -1,2 +1,6 @@
 test-sv01,test group1,192.168.100.100
 test-sv02,test group1,192.168.100.101
+test-sv03,test group1,192.168.100.102
+test-sv04,test group1,192.168.100.103
+test-sv05,test group1,192.168.100.104
+test-sv06,test group1,192.168.100.105
