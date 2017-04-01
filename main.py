@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from optparse import OptionParser
 import sys
 sys.path.append("lib/")
 from auth import *
@@ -6,10 +7,31 @@ from get_info import *
 from add import *
 
 if __name__ == "__main__":
-    zabbix_server = "192.168.1.36"
-    zabbix_user = "admin"
-    zabbix_pass = "zabbix"
+    p = OptionParser()
+    p.add_option("-p",
+                 "--passwd",
+                 type="string",
+                 help="Input the zabbix server password",
+                 dest="passwd")
+    
+    p.add_option("-s",
+                 "--server",
+                 type="string",
+                 help="Input the zabbix server address",
+                 dest="server")
+    
+    p.add_option("-u",
+                 "--user",
+                 type="string",
+                 help="Input the zabbix server user name",
+                 dest="user")
+    
+    options, args= p.parse_args()
 
+    zabbix_pass = options.passwd
+    zabbix_server = options.server
+    zabbix_user = options.user
+    
     head = {"Content-Type": "application/json-rpc"}
     
     auth_key = get_authkey(zabbix_server, zabbix_user, zabbix_pass, head)
