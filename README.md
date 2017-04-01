@@ -1,7 +1,7 @@
 # zabbix_api
 
 ##このスクリプトの説明
-csvファイルに記述されているノードをzabbixに自動登録してくれるスクリプトです。
+csvファイルに記述されているノードをzabbixに自動登録してくれるスクリプトです。  
 大量に登録する必要に便利です。
 
 
@@ -13,13 +13,13 @@ csvファイルに記述されているノードをzabbixに自動登録して�
 ```
 
 ##使用方法
-1.main.pyから見て"addnodes/hostlist.csv"に登録したいホストを記述します。
+1.main.pyから見て"addnodes/hostlist.csv"に登録したいホストを記述します。  
 　(ファイルの構文は上記を参照)
 
 2.main.pyをpythonコマンドを用いて実行します。
 ```
 [root@shadow:zabbix-api]# python main.py -s 192.168.1.36 -u admin -p zabbix
 ```
--s : サーバのIP又はドメイン名を指定します。
--u : zabbixユーザのユーザ名を指定します。
--p : zabbixユーザのパスワードを指定します。
+-s : サーバのIP又はドメイン名を指定します。  
+-u : zabbixユーザのユーザ名を指定します。  
+-p : zabbixユーザのパスワードを指定します。  
