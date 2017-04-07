@@ -12,8 +12,8 @@ csvファイルに記述されているノードをzabbixに自動登録して�
 ```
 ホスト名,ホストグループ名,IPアドレス,機器タイプ
 ```
-機器タイプは以下のいずれかを入れてください。
-1."L2Switch" or "L3Switch" or "Router"
+機器タイプは以下のいずれかを入れてください。  
+1."L2Switch" or "L3Switch" or "Router"  
  テンプレート "Template SNMP Device"が適用されます。
 
 2."Windows"
