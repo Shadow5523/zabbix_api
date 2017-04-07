@@ -16,10 +16,10 @@ csvファイルに記述されているノードをzabbixに自動登録して�
 1."L2Switch" or "L3Switch" or "Router"  
  テンプレート "Template SNMP Device"が適用されます。
 
-2."Windows"
+2."Windows"  
  テンプレート"Template OS Windows"が適用されます。
 
-3."Linux"
+3."Linux"  
  テンプレート"Template OS Linux"が適用されます。
 
 ※ 監視するノード側でエージェントの設定を正常に適用しないとアイテム取得に失敗します。
