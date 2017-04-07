@@ -13,12 +13,15 @@ class zabbix_add:
 
     def add_host(self, hostname, hostgroupid, templateid, ipaddress, port):
         url = "http://" + self.zabbix_server + "/zabbix/api_jsonrpc.php"
+        
+        inttype = 2 if port == "161" else 1
+        
         pdata = json.dumps({"jsonrpc" : 2.0,
                             "method" : "host.create",
                             "params" : {
                                 "host" : hostname,
                                 "interfaces" : [{
-                                    "type" : 1,
+                                    "type" : inttype,
                                     "main" : 1,
                                     "useip" : 1,
                                     "ip" : ipaddress,
@@ -28,7 +31,7 @@ class zabbix_add:
                                 "groups" : [{
                                     "groupid" : hostgroupid
                                 }],
-                                "hostgroupid" : [{
+                                "templates" : [{
                                     "templateid" : templateid
                                 }],
                                 },

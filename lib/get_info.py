@@ -10,10 +10,10 @@ class get_info:
 
 
         
-    def get_groupid(self, hostgropname):
+    def get_id(self, hostgropname, gettype, idtype):
         url = "http://" + self.zabbix_server + "/zabbix/api_jsonrpc.php"
         pdata = json.dumps({"jsonrpc" : 2.0,
-                            "method" : "hostgroup.get",
+                            "method" : gettype + ".get",
                             "params" : {
                                 "output" : "extend",
                                 "filter" : {
@@ -27,7 +27,7 @@ class get_info:
         result = urllib2.urlopen(urllib2.Request(url, pdata, self.head)).read()
 
         try:
-            return json.loads(result)['result'][0]['groupid']
+            return json.loads(result)['result'][0][idtype]
 
         except:
             return 1

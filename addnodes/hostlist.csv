@@ -1,6 +1,6 @@
-test-sv01,test group1,192.168.100.100
-test-sv02,test group1,192.168.100.101
-test-sv03,test group1,192.168.100.102
-test-sv04,test group1,192.168.100.103
-test-sv05,test group1,192.168.100.104
-test-sv06,test group1,192.168.100.105
+test-sv01,test group1,192.168.100.100,L2switch
+test-sv02,test group1,192.168.100.101,L3Switch
+test-sv03,test group1,192.168.100.102,L2Switch
+test-sv04,test group1,192.168.100.103,Linux
+test-sv05,test group1,192.168.100.104,Windows
+test-sv06,test group1,192.168.100.105,Router
